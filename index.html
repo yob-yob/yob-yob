@@ -8,9 +8,12 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/json/particles-home-config.js"></script>
   </head>
-  <body class="bg-gray-900 text-gray-100">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
+  <body class="bg-gray-900 text-gray-100 relative">
+    
+    <div class="relative container mx-auto px-4 py-8 max-w-4xl z-10">
       <!-- Header/Contact Information -->
       <header class="text-center mb-12">
         <img
@@ -266,7 +269,7 @@
         <h2 class="text-2xl font-bold mb-4 text-white">Work Experience</h2>
 
         <!-- Full-Stack Web Developer at Asuene Inc. -->
-        <div class="mb-6 bg-green-900 bg-opacity-50 p-6 rounded-lg shadow-lg">
+        <div class="mb-6 bg-green-900 bg-opacity-25 p-6 rounded-lg shadow-lg">
           <h3 class="text-xl font-semibold text-white">Full-Stack Web Developer</h3>
           <p class="text-gray-200">Asuene Inc. · Full-time</p>
           <p class="text-gray-300">February 2025 - Present · 4 months</p>
@@ -321,7 +324,7 @@
         </div>
 
         <!-- Senior Full Stack Web Developer & Team Leader at COPYANDPASTE,INC -->
-        <div class="mb-6 bg-green-900 bg-opacity-50 p-6 rounded-lg shadow-lg">
+        <div class="mb-6 bg-green-900 bg-opacity-25 p-6 rounded-lg shadow-lg">
           <h3 class="text-xl font-semibold text-white">Senior Full Stack Web Developer & Team Leader</h3>
           <p class="text-gray-200">COPYANDPASTE,INC. · Full-time → Contractor</p>
           <p class="text-gray-300">Aug 2018 - Feb 2025 (Full-time) → Feb 2025 - Present (Contractor)</p>
@@ -454,8 +457,14 @@
       </section>
     </div>
 
+    <div id="particles-js" class="absolute top-0 left-0 bottom-0 right-0 z-0"></div>
+
     <footer class="text-center py-6 text-gray-400">
       <p>© 2024 Grover Sean Reyes. All rights reserved.</p>
     </footer>
+
+    <script>
+      particlesJS('particles-js', particlesHomeConfig);
+    </script>
   </body>
 </html>
