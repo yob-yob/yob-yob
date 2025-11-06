@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grover Sean Reyes - Resume</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @media print {
+        * {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        @page {
+          size: 8.5in 14in;
+          margin: 0.5in;
+        }
+        body {
+          background: white;
+          margin: 0;
+          padding: 0;
+        }
+        .legal-paper {
+          width: 100%;
+          max-width: 8.5in;
+          height: auto;
+          max-height: 14in;
+          border: 1px solid black;
+          background: white;
+          box-shadow: none;
+          margin: 0;
+          padding: 0.5in;
+          overflow: hidden;
+          page-break-after: avoid;
+          page-break-inside: avoid;
+          box-sizing: border-box;
+        }
+        .no-print {
+          display: none;
+        }
+      }
+      @media screen {
+        body {
+          background: #f3f4f6;
+          padding: 20px;
+        }
+        .legal-paper {
+          width: 8.5in;
+          min-height: 14in;
+          background: white;
+          box-shadow: 0 0 10px rgba(0,0,0,0.2);
+          margin: 20px auto;
+          padding: 0.75in;
+        }
+      }
+      .section-divider {
+        border-top: 2px solid #3b82f6;
+        margin: 0.5rem 0;
+      }
+      .border-blue {
+        border-color: #3b82f6;
+      }
+      .border-green {
+        border-color: #10b981;
+      }
+      .border-purple {
+        border-color: #8b5cf6;
+      }
+      .border-orange {
+        border-color: #f59e0b;
+      }
+      .border-pink {
+        border-color: #ec4899;
+      }
+      .border-cyan {
+        border-color: #06b6d4;
+      }
+      .compact-text {
+        font-size: 0.75rem;
+        line-height: 1.3;
+      }
+      .compact-heading {
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+      }
+      .compact-list {
+        font-size: 0.7rem;
+        line-height: 1.2;
+        margin-left: 0.75rem;
+      }
+      .tech-pill {
+        display: inline-block;
+        padding: 0.15rem 0.5rem;
+        margin: 0.15rem 0.2rem 0.15rem 0;
+        background-color: #e5e7eb;
+        border-radius: 9999px;
+        font-size: 0.65rem;
+        color: #374151;
+        border: 1px solid #d1d5db;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="legal-paper text-gray-900">
+      <!-- Header -->
+      <header class="flex items-start gap-4 mb-4 pb-3 border-b-2 border-blue">
+        <img
+          src="A-Nice-Photo-Of-Myself.jpg"
+          alt="Grover Sean Reyes"
+          class="w-20 h-20 rounded-full object-cover border-2 border-blue flex-shrink-0"
+        />
+        <div class="flex-1">
+          <h1 class="text-2xl font-bold mb-1">GROVER SEAN REYES</h1>
+          <div class="text-xs text-gray-700 mb-1">
+            <span>📧 mr.seangrover@icloud.com</span>
+            <span class="mx-2">|</span>
+            <span>🎂 January 22, 1999</span>
+          </div>
+          <div class="text-xs">
+            <a href="https://yob-yob.github.io/yob-yob/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">🌐 Portfolio: yob-yob.github.io/yob-yob/</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Professional Summary -->
+      <section class="mb-3">
+        <h2 class="text-sm font-bold uppercase border-b-2 border-green pb-1 mb-2">Professional Summary</h2>
+        <p class="compact-text text-justify">
+          Experienced full-stack web developer with over 8 years of expertise in PHP and Laravel development. 
+          Strong proficiency in modern frontend frameworks (React/Next.js, Vue/Nuxt.js, Svelte/SvelteKit) and Tailwind CSS. 
+          Experienced in team leadership, mentorship, and architecting scalable applications. Passionate about TDD, CI/CD, 
+          and Docker-based development. Prioritizes security, code quality, and collaborative teamwork.
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Two Column Layout: 1/3 and 2/3 -->
+      <div class="grid grid-cols-3 gap-x-4">
+        <!-- Column 1: 1/3 width - Core Skills & Technical Expertise -->
+        <div class="col-span-1">
+          <!-- Core Skills -->
+          <section class="mb-3">
+            <h2 class="text-sm font-bold uppercase border-b-2 border-purple pb-1 mb-2">Core Skills</h2>
+            <ul class="compact-list">
+              <li>Full-Stack Development</li>
+              <li>Architecture Design</li>
+              <li>API Development</li>
+              <li>Database Design</li>
+              <li>CI/CD Implementation</li>
+              <li>Docker & DevOps</li>
+              <li>Infrastructure as Code</li>
+              <li>Cloud Services (AWS)</li>
+              <li>Team Leadership</li>
+              <li>Mentorship & Training</li>
+              <li>Project Planning</li>
+              <li>TDD & Testing</li>
+            </ul>
+          </section>
+
+          <!-- Technical Expertise -->
+          <section class="mb-3">
+            <h2 class="text-sm font-bold uppercase border-b-2 border-orange pb-1 mb-2">Technical Expertise</h2>
+            <div class="compact-text">
+              <div class="mb-1">
+                <strong class="text-xs">Backend:</strong><br>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">NestJS</span>
+                <span class="tech-pill">Node.js</span>
+              </div>
+              <div class="mb-1">
+                <strong class="text-xs">Frontend:</strong><br>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">Vue.js</span>
+                <span class="tech-pill">Nuxt.js</span>
+                <span class="tech-pill">Livewire</span>
+                <span class="tech-pill">Filament</span>
+                <span class="tech-pill">Alpine.js</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">SCSS</span>
+              </div>
+              <div class="mb-1">
+                <strong class="text-xs">Databases:</strong><br>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">MariaDB</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">SQLite</span>
+                <span class="tech-pill">Redis</span>
+              </div>
+              <div class="mb-1">
+                <strong class="text-xs">DevOps:</strong><br>
+                <span class="tech-pill">Docker</span>
+                <span class="tech-pill">Git</span>
+                <span class="tech-pill">GitLab</span>
+                <span class="tech-pill">GitLab CI</span>
+                <span class="tech-pill">GitHub</span>
+                <span class="tech-pill">CircleCI</span>
+                <span class="tech-pill">Terraform</span>
+              </div>
+              <div class="mb-1">
+                <strong class="text-xs">Cloud:</strong><br>
+                <span class="tech-pill">AWS EC2</span>
+                <span class="tech-pill">AWS ECS</span>
+                <span class="tech-pill">AWS S3</span>
+                <span class="tech-pill">AWS Cognito</span>
+                <span class="tech-pill">Linux</span>
+              </div>
+              <div>
+                <strong class="text-xs">APIs:</strong><br>
+                <span class="tech-pill">Stripe</span>
+                <span class="tech-pill">Vipps</span>
+                <span class="tech-pill">Magento</span>
+                <span class="tech-pill">Google Sheets</span>
+                <span class="tech-pill">Slack</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Column 2: 2/3 width - Work Experience, Projects, Education -->
+        <div class="col-span-2">
+          <!-- Work Experience -->
+          <section class="mb-3">
+            <h2 class="text-sm font-bold uppercase border-b-2 border-cyan pb-1 mb-2">Work Experience</h2>
+            
+            <!-- Asuene Inc. -->
+            <div class="mb-2">
+              <div class="flex justify-between items-start mb-1">
+                <div>
+                  <h3 class="compact-heading">Full-Stack Web Developer</h3>
+                  <p class="compact-text text-gray-700">Asuene Inc. · Full-time</p>
+                </div>
+                <p class="compact-text text-gray-600">Feb 2025 - Present</p>
+              </div>
+              <p class="compact-text text-gray-600 mb-1">Work From Home</p>
+              <ul class="compact-list">
+                <li>Design and architect complex web applications with focus on scalability and performance</li>
+                <li>Expert-level proficiency in front-end and back-end technologies</li>
+                <li>Design and optimize database schemas, implement performance optimizations</li>
+                <li>Provide mentorship, lead code reviews, and write comprehensive documentation</li>
+              </ul>
+              <p class="compact-text mt-1 text-gray-600">
+                <strong>Tech:</strong> NestJS, ReactJS, NextJS, NuxtJS, VueJS, SCSS, PostgreSQL, AWS (Cognito, S3, EC2, ECS), CircleCI, Terraform, Node.js
+              </p>
+            </div>
+
+            <!-- mydigitalnomads -->
+            <div class="mb-2">
+              <div class="flex justify-between items-start mb-1">
+                <div>
+                  <h3 class="compact-heading">Back End Developer</h3>
+                  <p class="compact-text text-gray-700">mydigitalnomads · Contract</p>
+                </div>
+                <p class="compact-text text-gray-600">Jan 2025 - Apr 2025</p>
+              </div>
+              <p class="compact-text text-gray-600">Remote · PHP, Server Side Development</p>
+            </div>
+
+            <!-- COPYANDPASTE,INC -->
+            <div class="mb-2">
+              <div class="flex justify-between items-start mb-1">
+                <div>
+                  <h3 class="compact-heading">Senior Full Stack Web Developer & Team Leader</h3>
+                  <p class="compact-text text-gray-700">COPYANDPASTE,INC. · Full-time → Contractor</p>
+                </div>
+                <p class="compact-text text-gray-600">Aug 2018 - Present</p>
+              </div>
+              <p class="compact-text text-gray-600 mb-1">Region VII - Central Visayas, Philippines</p>
+              <ul class="compact-list">
+                <li>Started as part-time student developer; helped transition company to Laravel framework</li>
+                <li>Implemented CI/CD pipelines, self-taught TDD practices, established Docker-based environments</li>
+                <li>Managed team of Laravel developers, conducted training and mentorship programs</li>
+                <li>Project planning, estimation, development, deployment; third-party API integrations (Stripe, Magento, Vipps)</li>
+              </ul>
+              <p class="compact-text mt-1 text-gray-600">
+                <strong>Tech:</strong> Laravel (v5-v12), PHP (v5.3-v8.5), VueJS, Laravel Livewire, Laravel Filament, AlpineJS, Tailwind CSS, MySQL/MariaDB/PostgreSQL/SQLite, Redis, Docker, GitLab CI, Stripe, Vipps, Magento
+              </p>
+            </div>
+
+            <!-- Freelance -->
+            <div class="mb-2">
+              <div class="flex justify-between items-start mb-1">
+                <div>
+                  <h3 class="compact-heading">Freelance Web Developer</h3>
+                  <p class="compact-text text-gray-700">Self-employed</p>
+                </div>
+                <p class="compact-text text-gray-600">Jan 2017 - Aug 2018</p>
+              </div>
+              <p class="compact-text text-gray-600">Region VII - Central Visayas, Philippines</p>
+            </div>
+
+            <!-- Working Student -->
+            <div class="mb-2">
+              <div class="flex justify-between items-start mb-1">
+                <div>
+                  <h3 class="compact-heading">Working Student</h3>
+                  <p class="compact-text text-gray-700">Asian College of Technology - Cebu</p>
+                </div>
+                <p class="compact-text text-gray-600">May 2016 - Jul 2018</p>
+              </div>
+              <p class="compact-text text-gray-600">Non-academic scholarship program; office assistant role with training in Microsoft Office Suite</p>
+            </div>
+          </section>
+
+          <div class="section-divider"></div>
+
+          <!-- Projects -->
+          <section class="mb-3">
+            <h2 class="text-sm font-bold uppercase border-b-2 border-pink pb-1 mb-2">Notable Projects</h2>
+            <div class="mb-1">
+              <h3 class="compact-heading">Localhooks.dev</h3>
+              <p class="compact-text">SaaS webhook testing tool for local development environments. Eliminates need for temporary ngrok URLs.</p>
+            </div>
+            <div>
+              <h3 class="compact-heading">Laravel CI</h3>
+              <p class="compact-text">Open-source collection of Docker images for GitLab CI/CD pipelines, optimized for Laravel development workflows.</p>
+            </div>
+          </section>
+
+          <div class="section-divider"></div>
+
+          <!-- Education -->
+          <section class="mb-3">
+            <h2 class="text-sm font-bold uppercase border-b-2 border-green pb-1 mb-2">Education</h2>
+            <div class="mb-1">
+              <div class="flex justify-between items-start mb-1">
+                <div>
+                  <h3 class="compact-heading">Bachelor's Degree in Information Technology</h3>
+                  <p class="compact-text text-gray-700">Asian College of Technology - IEF</p>
+                </div>
+                <p class="compact-text text-gray-600">2015 - 2019</p>
+              </div>
+              <p class="compact-text text-gray-600">Pantaleon del Rosario St, Cebu City, 6000 Cebu</p>
+            </div>
+            <div>
+              <div class="flex justify-between items-start mb-1">
+                <div>
+                  <h3 class="compact-heading">Preliminary Education</h3>
+                  <p class="compact-text text-gray-700">Talamban National High School</p>
+                </div>
+                <p class="compact-text text-gray-600">2011 - 2015</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-print text-center mt-4 text-gray-600 text-sm">
+      <p>Press Ctrl+P (or Cmd+P on Mac) to print this resume</p>
+    </div>
+  </body>
+</html>
+

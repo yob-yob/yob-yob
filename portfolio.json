@@ -1,0 +1,413 @@
+{
+  "personal": {
+    "name": "Grover Sean Reyes",
+    "email": "mr.seangrover@icloud.com",
+    "birthday": "January 22, 1999",
+    "profileImage": "A-Nice-Photo-Of-Myself.jpg",
+    "portfolioUrl": "https://yob-yob.github.io/yob-yob/"
+  },
+  "about": {
+    "summary": "Experienced full-stack web developer with over 8 years of expertise in PHP and Laravel development. I have strong proficiency in modern frontend frameworks including React (Next.js), Vue (Nuxt.js), and Svelte (SvelteKit), along with a preference for Tailwind CSS though I'm adaptable to any CSS framework. Beyond coding, I bring experience in team leadership, mentorship, and architecting scalable applications. I'm passionate about best practices including TDD, CI/CD, and Docker-based development. I prioritize security, code quality, and collaborative teamwork, and I'm always eager to learn and grow under exceptional leadership."
+  },
+  "skills": {
+    "categories": [
+      {
+        "name": "Development & Architecture",
+        "items": [
+          "Full-Stack Development",
+          "Architecture Design",
+          "API Development & Integration",
+          "Database Design & Optimization",
+          "Performance Optimization",
+          "Testing & TDD"
+        ]
+      },
+      {
+        "name": "DevOps & Infrastructure",
+        "items": [
+          "CI/CD Implementation",
+          "Docker & Containerization",
+          "DevOps & Infrastructure",
+          "Server Management",
+          "Infrastructure as Code (Terraform)",
+          "Cloud Services (AWS)"
+        ]
+      },
+      {
+        "name": "Leadership & Collaboration",
+        "items": [
+          "Team Leadership & Management",
+          "Mentorship & Training",
+          "Project Planning & Estimation",
+          "Code Review & Quality Assurance",
+          "Technical Documentation",
+          "Authentication & Security"
+        ]
+      }
+    ]
+  },
+  "techStack": {
+    "categories": [
+      {
+        "name": "Backend",
+        "items": [
+          "PHP",
+          "Laravel",
+          "NestJS",
+          "Node.js"
+        ]
+      },
+      {
+        "name": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "Vue.js",
+          "Nuxt.js",
+          "Laravel Livewire",
+          "Laravel Filament",
+          "Alpine.js",
+          "Tailwind CSS",
+          "SCSS"
+        ]
+      },
+      {
+        "name": "Databases",
+        "items": [
+          "MySQL",
+          "MariaDB",
+          "PostgreSQL",
+          "SQLite",
+          "Redis"
+        ]
+      },
+      {
+        "name": "DevOps & Tools",
+        "items": [
+          "Docker",
+          "Git",
+          "GitLab",
+          "GitLab CI",
+          "GitHub",
+          "CircleCI",
+          "Terraform"
+        ]
+      },
+      {
+        "name": "Cloud & Infrastructure",
+        "items": [
+          "AWS EC2",
+          "AWS ECS",
+          "AWS S3",
+          "AWS Cognito",
+          "Linux"
+        ]
+      },
+      {
+        "name": "APIs & Services",
+        "items": [
+          "Stripe",
+          "Vipps",
+          "Magento",
+          "Google Sheets API",
+          "Slack Webhook"
+        ]
+      },
+      {
+        "name": "Additional Tools",
+        "items": [
+          "Sentry",
+          "Postal",
+          "Bun",
+          "NPM",
+          "Laravel Herd",
+          "Mattermost"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "localhooks",
+      "name": "Localhooks",
+      "description": "Localhooks.dev is a powerful tool designed to simplify webhook testing in local development environments. It eliminates the need for temporary ngrok URLs and provides a permanent solution for testing webhook integrations.",
+      "url": "https://localhooks.dev",
+      "linkText": "Visit Site",
+      "tags": [
+        "SaaS",
+        "Webhook Testing",
+        "Development Tools"
+      ]
+    },
+    {
+      "id": "laravel-ci",
+      "name": "Laravel CI",
+      "description": "A collection of Docker images specifically crafted for running GitLab CI/CD pipelines for Laravel projects. These images are personally maintained and optimized for Laravel development workflows.",
+      "url": "https://github.com/yob-yob/Laravel-CI",
+      "linkText": "GitHub",
+      "tags": [
+        "Docker",
+        "CI/CD",
+        "Laravel",
+        "Open Source"
+      ]
+    }
+  ],
+  "hobbies": {
+    "hobbies": [
+      {
+        "name": "Coding",
+        "icon": "💻"
+      },
+      {
+        "name": "Freediving",
+        "icon": "🏊"
+      },
+      {
+        "name": "Ice Skating",
+        "icon": "⛸️",
+        "note": "still learning"
+      },
+      {
+        "name": "Reading Self-help Books",
+        "icon": "📖"
+      },
+      {
+        "name": "Homelabbing",
+        "icon": "🖥️",
+        "note": "still learning"
+      }
+    ],
+    "interests": [
+      {
+        "name": "Learning",
+        "icon": "📚"
+      },
+      {
+        "name": "Exploring the World",
+        "icon": "🌍"
+      },
+      {
+        "name": "Coffee",
+        "icon": "☕"
+      },
+      {
+        "name": "Extreme Activities",
+        "icon": "🎢"
+      },
+      {
+        "name": "Soft 70s - 90s Music",
+        "icon": "🎵"
+      }
+    ]
+  },
+  "workExperience": [
+    {
+      "id": "asuene-inc",
+      "title": "Full-Stack Web Developer",
+      "company": "Asuene Inc.",
+      "employmentType": "Full-time",
+      "startDate": "February 2025",
+      "endDate": "Present",
+      "duration": "4 months",
+      "location": "Work From Home",
+      "highlighted": true,
+      "keyResponsibilities": [
+        "Design and architect complex web applications, considering scalability and performance",
+        "Demonstrate expert-level knowledge and proficiency in both front-end and back-end technologies",
+        "Design and optimize database schemas, considering data relationships and integrity",
+        "Identify and implement performance optimizations to enhance application speed and efficiency",
+        "Collaborate with teams to facilitate smooth application deployment and continuous integration",
+        "Provide mentorship and guidance, promoting professional growth",
+        "Write comprehensive code documentation to facilitate future maintenance and collaboration",
+        "Lead code reviews and provide constructive feedback to improve code quality",
+        "Stay updated with the latest trends and technologies in full-stack development"
+      ],
+      "techStack": [
+        "NestJS",
+        "ReactJS",
+        "NextJS",
+        "NuxtJS",
+        "VueJS",
+        "SCSS",
+        "PostgreSQL",
+        "Google Sheets API",
+        "Slack Webhook",
+        "AWS Cognito",
+        "AWS S3",
+        "AWS EC2",
+        "AWS ECS",
+        "CircleCI",
+        "Git",
+        "Github",
+        "Terraform (w/ AWS)",
+        "Node.js",
+        "NPM"
+      ]
+    },
+    {
+      "id": "mydigitalnomads",
+      "title": "Back End Developer",
+      "company": "mydigitalnomads",
+      "employmentType": "Contract",
+      "startDate": "Jan 2025",
+      "endDate": "Apr 2025",
+      "duration": "4 months",
+      "location": "Remote",
+      "highlighted": false,
+      "skills": [
+        "PHP",
+        "Server Side Development"
+      ]
+    },
+    {
+      "id": "copyandpaste",
+      "title": "Senior Full Stack Web Developer & Team Leader",
+      "company": "COPYANDPASTE,INC.",
+      "employmentType": "Full-time → Contractor",
+      "startDate": "Aug 2018",
+      "endDate": "Present",
+      "fullTimeEndDate": "Feb 2025",
+      "contractorStartDate": "Feb 2025",
+      "location": "Region VII - Central Visayas, Philippines",
+      "highlighted": true,
+      "note": "My first official company that hired and trusted me, creating a deep connection. Transitioned to contractor status to have more control over my time while maintaining our strong working relationship.",
+      "careerJourney": [
+        "Started as part-time student developer working on Laravel, WordPress and Magento sites",
+        "Helped company transition to Laravel framework for modern web development",
+        "Implemented CI/CD pipelines across projects for automated testing and deployment",
+        "Self-taught TDD practices to improve code quality and reliability",
+        "Established Docker-based development environments for consistent team workflows",
+        "Handled large-scale projects with extensive codebases and high-value transactions",
+        "Created accurate project time estimates and maintained reasonable development hours",
+        "Currently managing a team of Laravel developers as Team Leader",
+        "Conducting junior developer training sessions and mentorship programs"
+      ],
+      "keyResponsibilities": [
+        "Project planning, estimation, development, and deployment for client projects",
+        "Collaboration with design teams on UI/UX, animations, effects, and user interactions",
+        "Communication with project managers on progress, scope changes, and client requirements",
+        "Maintenance and bug fixes for existing legacy projects",
+        "Server infrastructure coordination with operations team for hosting and software setup",
+        "Third-party API integrations (Stripe, Magento, Vipps, and various service providers)",
+        "Standardized team development environment and tooling through comprehensive documentation",
+        "Implemented CI/CD best practices and automated testing across projects",
+        "Created and maintained project documentation from inception to deployment and maintenance"
+      ],
+      "techStack": [
+        "Laravel (v5 - v12)",
+        "PHP (v5.3 - v8.5)",
+        "VueJS",
+        "Laravel Livewire",
+        "Laravel Filament",
+        "AlpineJS",
+        "Tailwind CSS",
+        "MySQL",
+        "MariaDB",
+        "PostgreSQL",
+        "SQLite",
+        "Redis",
+        "Docker",
+        "GitLab",
+        "GitLab CI",
+        "Stripe",
+        "Vipps",
+        "Magento",
+        "Node.js",
+        "Bun",
+        "NPM",
+        "Linux",
+        "Sentry",
+        "Postal",
+        "Mattermost",
+        "Laravel Herd"
+      ]
+    },
+    {
+      "id": "freelance",
+      "title": "Freelance Web Developer",
+      "company": "Self-employed",
+      "employmentType": "Freelance",
+      "startDate": "Jan 2017",
+      "endDate": "Aug 2018",
+      "duration": "1 year 8 months",
+      "location": "Region VII - Central Visayas, Philippines",
+      "highlighted": false
+    },
+    {
+      "id": "working-student",
+      "title": "Working Student",
+      "company": "Asian College of Technology - Cebu",
+      "employmentType": "Part-time",
+      "startDate": "May 2016",
+      "endDate": "Jul 2018",
+      "duration": "2 years 3 months",
+      "location": "Region VII - Central Visayas, Philippines",
+      "highlighted": false,
+      "description": "Non-academic scholarship program at Asian College of Technology - IEF where I served as an office assistant while pursuing my Bachelor's Degree in Information Technology. This role provided valuable professional development through training in Microsoft Office Suite (Excel, Word, PowerPoint) and essential office skills.",
+      "impact": "This experience significantly contributed to my career growth by developing my communication skills, understanding of teamwork in professional environments, and navigating office dynamics."
+    }
+  ],
+  "education": [
+    {
+      "id": "college",
+      "degree": "Bachelor's Degree in Information Technology",
+      "institution": "Asian College of Technology - IEF",
+      "startYear": 2015,
+      "endYear": 2019,
+      "address": "Pantaleon del Rosario St, Cebu City, 6000 Cebu",
+      "description": "During the early days of my college adventure, I excelled in areas of programming and basic computer knowledge. I then applied for a non-academic scholarship (Working Student program) at the school. During my application, we were trained to be experts in certain areas, like Microsoft Excel, MS Word, MS PowerPoint, and all other necessary skills needed for an office assistant worker to perform on the job.",
+      "impact": "This experience helped me a lot to boost my career. I learned how to communicate with people, I learned about teamwork in the office, and even understood office politics."
+    },
+    {
+      "id": "high-school",
+      "degree": "Preliminary Education",
+      "institution": "Talamban National High School",
+      "startYear": 2011,
+      "endYear": 2015,
+      "address": "Gov. M. Cuenco Ave, Cebu City, 6000 Cebu"
+    }
+  ],
+  "investments": {
+    "description": "I believe in continuously investing in tools, resources, and education that enhance my productivity and professional growth. Here are some of the key investments I've made:",
+    "items": [
+      {
+        "id": "macbook-pro-m4",
+        "name": "MacBook Pro M4",
+        "description": "My primary device for both work and personal projects, invested in for optimal performance and reliability in my development career.",
+        "borderColor": "blue"
+      },
+      {
+        "id": "laracast",
+        "name": "Laracast - Personal Lifetime Subscription",
+        "description": "Comprehensive Laravel and PHP education platform providing lifetime access to courses, tutorials, and best practices.",
+        "borderColor": "green"
+      },
+      {
+        "id": "test-driven-laravel",
+        "name": "Test-Driven Laravel Course - Given For Free By The Author",
+        "description": "A comprehensive video course on designing robust Laravel applications with TDD, covering real-world scenarios and best practices.",
+        "url": "https://course.testdrivenlaravel.com/",
+        "borderColor": "purple"
+      },
+      {
+        "id": "tableplus",
+        "name": "TablePlus - Personal License",
+        "description": "Modern database management tool that helps me efficiently work with MySQL, PostgreSQL, and other databases.",
+        "borderColor": "yellow"
+      },
+      {
+        "id": "cursor-ai",
+        "name": "Cursor AI Code Editor - Personal Subscription",
+        "description": "AI-powered code editor that enhances my development workflow and productivity through intelligent code assistance.",
+        "borderColor": "indigo"
+      }
+    ]
+  },
+  "meta": {
+    "lastUpdated": "2025",
+    "copyright": "© 2024 Grover Sean Reyes. All rights reserved.",
+    "version": "1.0.0"
+  }
+}
+
