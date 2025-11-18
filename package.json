@@ -1,0 +1,16 @@
+{
+  "name": "yob-yob",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.html",
+  "scripts": {
+    "build:index": "tailwindcss -i ./assets/css/index.css -o ./builds/css/index.css",
+    "build:resume": "tailwindcss -i ./assets/css/resume.css -o ./builds/css/resume-output.css"
+  },
+  "author": "Grover Sean Reyes",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
