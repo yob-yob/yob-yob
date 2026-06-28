@@ -5,10 +5,33 @@
 
 	let mounted = $state(false);
 
+	function patchParticlesDeepExtend() {
+		Object.deepExtend = function deepExtend(
+			destination: Record<string, unknown>,
+			source: Record<string, unknown>
+		) {
+			for (const property in source) {
+				const value = source[property];
+				if (value && typeof value === 'object' && value.constructor === Object) {
+					destination[property] = (destination[property] as Record<string, unknown>) ?? {};
+					deepExtend(
+						destination[property] as Record<string, unknown>,
+						value as Record<string, unknown>
+					);
+				} else {
+					destination[property] = value;
+				}
+			}
+			return destination;
+		};
+	}
+
 	onMount(async () => {
 		if (!browser) return;
 
 		await import('particles.js');
+		patchParticlesDeepExtend();
+
 		const particlesJS = (window as Window & { particlesJS?: (id: string, config: unknown) => void })
 			.particlesJS;
 
