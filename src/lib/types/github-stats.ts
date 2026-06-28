@@ -11,7 +11,7 @@ export interface GitHubStats {
 		contributionYears: number[];
 		contributions: { date: string; count: number }[];
 	};
-	languagesByRepo: { name: string; bytes: number; percent: number; color: string }[];
+	languagesByRepo: { name: string; repoCount: number; percent: number; color: string }[];
 	statsByYear: { year: number; commits: number; contributions: number }[];
 	openSourceContributions: {
 		title: string;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T10:19:42.380Z",
+  "generatedAt": "2026-06-28T10:49:10.102Z",
   "username": "yob-yob",
   "profile": {
     "name": "Sean",
@@ -1479,94 +1479,58 @@
       },
       {
         "date": "2026-06-28",
-        "count": 9
+        "count": 10
       }
     ]
   },
   "languagesByRepo": [
     {
       "name": "PHP",
-      "bytes": 17846064,
+      "repoCount": 7,
       "color": "#4F5D95",
-      "percent": 90.3
+      "percent": 31.8
     },
     {
       "name": "Svelte",
-      "bytes": 363508,
+      "repoCount": 4,
       "color": "#ff3e00",
-      "percent": 1.8
-    },
-    {
-      "name": "SCSS",
-      "bytes": 336860,
-      "color": "#c6538c",
-      "percent": 1.7
+      "percent": 18.2
     },
     {
       "name": "HTML",
-      "bytes": 274159,
+      "repoCount": 3,
       "color": "#e34c26",
-      "percent": 1.4
+      "percent": 13.6
     },
     {
       "name": "JavaScript",
-      "bytes": 266053,
+      "repoCount": 2,
       "color": "#f1e05a",
-      "percent": 1.3
-    },
-    {
-      "name": "Blade",
-      "bytes": 242302,
-      "color": "#f7523f",
-      "percent": 1.2
-    },
-    {
-      "name": "Vue",
-      "bytes": 204092,
-      "color": "#41b883",
-      "percent": 1
+      "percent": 9.1
     },
     {
       "name": "TypeScript",
-      "bytes": 140072,
+      "repoCount": 2,
       "color": "#3178c6",
-      "percent": 0.7
+      "percent": 9.1
     },
     {
-      "name": "CSS",
-      "bytes": 62668,
-      "color": "#663399",
-      "percent": 0.3
+      "name": "Blade",
+      "repoCount": 2,
+      "color": "#f7523f",
+      "percent": 9.1
     },
     {
-      "name": "Less",
-      "bytes": 14542,
-      "color": "#1d365d",
-      "percent": 0.1
-    },
-    {
-      "name": "Dockerfile",
-      "bytes": 6643,
-      "color": "#384d54",
-      "percent": 0
+      "name": "Vue",
+      "repoCount": 1,
+      "color": "#41b883",
+      "percent": 4.5
     },
     {
       "name": "Shell",
-      "bytes": 6166,
+      "repoCount": 1,
       "color": "#89e051",
-      "percent": 0
-    },
-    {
-      "name": "Makefile",
-      "bytes": 1412,
-      "color": "#427819",
-      "percent": 0
-    },
-    {
-      "name": "Batchfile",
-      "bytes": 541,
-      "color": "#C1F12E",
-      "percent": 0
+      "percent": 4.5
     }
   ],
   "statsByYear": [
@@ -1617,8 +1581,8 @@
     },
     {
       "year": 2026,
-      "commits": 99,
-      "contributions": 112
+      "commits": 100,
+      "contributions": 113
     }
   ],
   "openSourceContributions": [

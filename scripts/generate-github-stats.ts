@@ -131,7 +131,7 @@ async function fetchProfileDetails(username: string) {
 }
 
 async function fetchLanguagesByRepo(username: string) {
-	const languageMap = new Map<string, { bytes: number; color: string }>();
+	const languageMap = new Map<string, { repoCount: number; color: string }>();
 	let cursor: string | null = null;
 	let hasNextPage = true;
 
@@ -140,27 +140,20 @@ async function fetchLanguagesByRepo(username: string) {
 			user: {
 				repositories: {
 					nodes: {
-						languages: {
-							edges: { size: number; node: { name: string; color: string | null } }[];
-						};
+						primaryLanguage: { name: string; color: string | null } | null;
 					}[];
 					pageInfo: { endCursor: string | null; hasNextPage: boolean };
 				};
 			};
 		}>(
 			`
-			query ReposLanguages($login: String!, $endCursor: String) {
+			query ReposPerLanguage($login: String!, $endCursor: String) {
 				user(login: $login) {
 					repositories(isFork: false, first: 100, after: $endCursor, ownerAffiliations: OWNER, privacy: PUBLIC) {
 						nodes {
-							languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
-								edges {
-									size
-									node {
-										name
-										color
-									}
-								}
+							primaryLanguage {
+								name
+								color
 							}
 						}
 						pageInfo {
@@ -175,16 +168,18 @@ async function fetchLanguagesByRepo(username: string) {
 		);
 
 		for (const repo of data.user.repositories.nodes) {
-			for (const edge of repo.languages.edges) {
-				const existing = languageMap.get(edge.node.name);
-				if (existing) {
-					existing.bytes += edge.size;
-				} else {
-					languageMap.set(edge.node.name, {
-						bytes: edge.size,
-						color: edge.node.color ?? '#586e75'
-					});
-				}
+			if (!repo.primaryLanguage) continue;
+
+			const { name, color } = repo.primaryLanguage;
+			const existing = languageMap.get(name);
+
+			if (existing) {
+				existing.repoCount += 1;
+			} else {
+				languageMap.set(name, {
+					repoCount: 1,
+					color: color ?? '#586e75'
+				});
 			}
 		}
 
@@ -192,16 +187,16 @@ async function fetchLanguagesByRepo(username: string) {
 		hasNextPage = data.user.repositories.pageInfo.hasNextPage;
 	}
 
-	const totalBytes = [...languageMap.values()].reduce((sum, lang) => sum + lang.bytes, 0);
+	const totalRepos = [...languageMap.values()].reduce((sum, lang) => sum + lang.repoCount, 0);
 
 	return [...languageMap.entries()]
-		.map(([name, { bytes, color }]) => ({
+		.map(([name, { repoCount, color }]) => ({
 			name,
-			bytes,
+			repoCount,
 			color,
-			percent: totalBytes > 0 ? Math.round((bytes / totalBytes) * 1000) / 10 : 0
+			percent: totalRepos > 0 ? Math.round((repoCount / totalRepos) * 1000) / 10 : 0
 		}))
-		.sort((a, b) => b.bytes - a.bytes);
+		.sort((a, b) => b.repoCount - a.repoCount);
 }
 
 async function fetchStatsByYear(username: string, years: number[]) {
