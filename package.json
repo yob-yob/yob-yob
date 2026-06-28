@@ -1,16 +1,34 @@
 {
   "name": "yob-yob",
-  "version": "1.0.0",
-  "description": "My personal website",
-  "main": "index.html",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Grover Sean Reyes - personal portfolio and resume",
   "scripts": {
-    "build:index": "tailwindcss -i ./assets/css/index.css -o ./builds/css/index.css",
-    "build:resume": "tailwindcss -i ./assets/css/resume.css -o ./builds/css/resume-output.css"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "author": "Grover Sean Reyes",
   "license": "MIT",
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.8",
+    "@sveltejs/kit": "^2.21.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tailwindcss/vite": "^4.1.17",
+    "svelte": "^5.33.0",
+    "svelte-check": "^4.2.1",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17"
+    "bits-ui": "^1.4.8",
+    "clsx": "^2.1.1",
+    "lucide-svelte": "^0.511.0",
+    "particles.js": "^2.0.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwind-variants": "^1.0.0"
   }
 }
