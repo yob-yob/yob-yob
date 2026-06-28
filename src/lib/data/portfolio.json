@@ -110,6 +110,16 @@
   },
   "projects": [
     {
+      "id": "monorepo-template",
+      "name": "Monorepo Template",
+      "description": "A Bun monorepo starter combining SvelteKit and ElysiaJS with Better Auth, Drizzle ORM, and TypeScript. Built as a reusable foundation for multi-tenant SaaS apps, featuring authentication flows, organization and team management, S3-backed file storage, and a fully type-safe full-stack setup.",
+      "resumeDescription": "Bun monorepo template (SvelteKit + ElysiaJS) with Better Auth and Drizzle—a reusable multi-tenant SaaS foundation with auth, org management, and S3 storage.",
+      "url": "https://city-os.demo.yob-yob.com/",
+      "linkText": "Visit Site",
+      "githubRepo": "yob-yob/monorepo-template",
+      "tags": ["Bun", "SvelteKit", "ElysiaJS", "Better Auth", "Drizzle", "TypeScript", "SaaS"]
+    },
+    {
       "id": "localhooks",
       "name": "Localhooks",
       "description": "Localhooks.dev is a powerful tool designed to simplify webhook testing in local development environments. It eliminates the need for temporary ngrok URLs and provides a permanent solution for testing webhook integrations.",
@@ -410,6 +420,12 @@
         "website": "gitlab",
         "label": "GitLab",
         "url": "https://gitlab.com/yob-yob"
+      },
+      {
+        "id": "youtube",
+        "website": "youtube",
+        "label": "YouTube",
+        "url": "https://www.youtube.com/@sean_reyes"
       }
     ],
     "certificates": [

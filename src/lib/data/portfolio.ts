@@ -31,6 +31,7 @@ export interface Project {
 	url: string;
 	linkText: string;
 	tags: string[];
+	githubRepo?: string;
 }
 
 export interface HobbyItem {
@@ -94,6 +95,7 @@ export type WebsiteKey =
 	| 'aws'
 	| 'stackoverflow'
 	| 'gitlab'
+	| 'youtube'
 	| 'hackerrank'
 	| 'generic';
 

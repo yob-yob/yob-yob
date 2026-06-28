@@ -8,6 +8,7 @@ import XLink from './XLink.svelte';
 import AwsLink from './AwsLink.svelte';
 import StackOverflowLink from './StackOverflowLink.svelte';
 import GitLabLink from './GitLabLink.svelte';
+import YoutubeLink from './YoutubeLink.svelte';
 import HackerRankLink from './HackerRankLink.svelte';
 import GenericLink from './GenericLink.svelte';
 
@@ -22,6 +23,7 @@ export const websiteLinkComponents: Record<WebsiteKey, LinkComponent> = {
 	aws: AwsLink,
 	stackoverflow: StackOverflowLink,
 	gitlab: GitLabLink,
+	youtube: YoutubeLink,
 	hackerrank: HackerRankLink,
 	generic: GenericLink
 };
