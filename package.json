@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "generate:github-stats": "tsx scripts/generate-github-stats.ts"
+    "generate:github-stats": "bun scripts/generate-github-stats.ts"
   },
   "author": "Grover Sean Reyes",
   "license": "MIT",
