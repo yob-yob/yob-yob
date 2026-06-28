@@ -129,13 +129,13 @@
 		<div>
 			<p class="mb-2 text-sm text-muted-foreground">Contribution activity</p>
 			<div class="relative overflow-x-auto pb-1">
-				<div class="flex min-w-max justify-around py-1">
+				<div class="flex min-w-max justify-around py-0.5 sm:py-1">
 					{#each weeks as week}
-						<div class="flex flex-col gap-1">
+						<div class="flex flex-col gap-0.5 sm:gap-1">
 							{#each week as day}
 								<button
 									type="button"
-									class="size-2.5 rounded-sm {cellLevel(day.count)} transition-transform hover:scale-125 hover:ring-1 hover:ring-emerald-300/60 focus-visible:scale-125 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+									class="size-1.5 rounded-[2px] sm:size-2.5 sm:rounded-sm {cellLevel(day.count)} transition-transform hover:scale-125 hover:ring-1 hover:ring-emerald-300/60 focus-visible:scale-125 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
 									aria-label={formatContributionLabel(day.date, day.count)}
 									onmouseenter={(event) => showTooltipFromMouse(event, day.date, day.count)}
 									onmousemove={moveTooltip}
