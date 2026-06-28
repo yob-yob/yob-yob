@@ -34,3 +34,6 @@ jobs:
           commit_message: 'chore: update github stats'
           file_pattern: static/data/github-stats.json
           skip_dirty_check: true
+          commit_user_name: Github Action (Update Github Stats)
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: Github Action (Update Github Stats) <41898282+github-actions[bot]@users.noreply.github.com>
