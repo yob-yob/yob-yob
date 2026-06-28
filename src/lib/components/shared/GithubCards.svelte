@@ -34,7 +34,7 @@
 	);
 </script>
 
-<section>
+<section id="github-cards" class="scroll-mt-24">
 	<div class="mb-6 flex flex-wrap items-end justify-between gap-2">
 		<h2 class="text-2xl font-bold text-white">Github Cards</h2>
 		{#if updatedLabel}

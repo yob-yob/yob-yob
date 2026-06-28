@@ -5,7 +5,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<SectionHeading title="Links" icon={Link} class="mb-12">
+<SectionHeading id="links" title="Links" icon={Link} class="mb-12">
 	<div class="space-y-8">
 		<div>
 			<h3 class="text-xl font-semibold text-white mb-4">Social Links</h3>

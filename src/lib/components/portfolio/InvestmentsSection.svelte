@@ -12,7 +12,7 @@
 	};
 </script>
 
-<SectionHeading title="Investment in Myself" class="mb-12">
+<SectionHeading id="investments" title="Investment in Myself" class="mb-12">
 	<Card class="bg-slate-800 border-slate-700 shadow-lg">
 		<CardContent class="p-6">
 			<p class="text-slate-300 mb-6 leading-relaxed">{portfolio.investments.description}</p>

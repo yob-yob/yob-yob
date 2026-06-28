@@ -6,7 +6,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<SectionHeading title="Tech Stack" icon={Wrench}>
+<SectionHeading id="tech-stack" title="Tech Stack" icon={Wrench}>
 	<Card class="bg-slate-800 border-slate-700 shadow-lg">
 		<CardContent class="p-6">
 			<div class="flex flex-wrap gap-2">

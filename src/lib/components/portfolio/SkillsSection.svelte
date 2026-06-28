@@ -4,7 +4,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<SectionHeading title="Skills" icon={Star}>
+<SectionHeading id="skills" title="Skills" icon={Star}>
 	<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
 		{#each portfolio.skills.categories as category}
 			<ul class="list-disc list-inside text-slate-300">

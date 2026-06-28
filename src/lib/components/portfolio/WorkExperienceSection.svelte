@@ -6,7 +6,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<SectionHeading title="Work Experience" icon={Briefcase}>
+<SectionHeading id="work-experience" title="Work Experience" icon={Briefcase}>
 	{#each portfolio.workExperience as job}
 		<Card
 			class="mb-6 shadow-lg border-slate-700 {job.highlighted

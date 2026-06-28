@@ -5,16 +5,17 @@
 	type IconComponent = typeof Star;
 
 	type Props = {
+		id?: string;
 		title: string;
 		icon?: IconComponent;
 		children: Snippet;
 		class?: string;
 	};
 
-	let { title, icon: IconComponent, children, class: className = 'mb-12' }: Props = $props();
+	let { id, title, icon: IconComponent, children, class: className = 'mb-12' }: Props = $props();
 </script>
 
-<section class={className}>
+<section {id} class="{className} scroll-mt-24">
 	<h2 class="text-2xl font-bold mb-4 text-white flex items-center gap-2">
 		{#if IconComponent}
 			<IconComponent class="w-10 h-10 shrink-0" />

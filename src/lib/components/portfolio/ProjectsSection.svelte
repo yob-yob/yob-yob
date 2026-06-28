@@ -7,7 +7,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<SectionHeading title="Projects" icon={Trophy}>
+<SectionHeading id="projects" title="Projects" icon={Trophy}>
 	{#each portfolio.projects as project}
 		<Card class="mb-6 bg-slate-800 border-slate-700 shadow-lg">
 			<CardHeader class="flex flex-row items-start justify-between space-y-0 pb-2">

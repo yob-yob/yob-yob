@@ -4,7 +4,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<SectionHeading title="Hobbies & Interests" icon={Sparkles} class="mb-12">
+<SectionHeading id="hobbies" title="Hobbies & Interests" icon={Sparkles} class="mb-12">
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		<div>
 			<h3 class="text-xl font-semibold text-white mb-4">Hobbies</h3>

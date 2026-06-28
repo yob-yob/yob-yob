@@ -5,7 +5,7 @@
 	import SectionHeading from './SectionHeading.svelte';
 </script>
 
-<SectionHeading title="Education" icon={GraduationCap}>
+<SectionHeading id="education" title="Education" icon={GraduationCap}>
 	{#each portfolio.education as school}
 		<Card class="mb-6 bg-slate-800 border-slate-700 shadow-lg">
 			<CardContent class="p-6">
