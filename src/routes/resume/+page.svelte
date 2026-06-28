@@ -18,8 +18,6 @@
 				{#if i > 0}<span class="mx-2">|</span>{/if}
 				<span>📧 {email}</span>
 			{/each}
-			<span class="mx-2">|</span>
-			<span>🎂 {resume.personal.birthday}</span>
 		</div>
 		<div class="text-xs flex flex-wrap gap-2">
 			<a

@@ -1,11 +1,14 @@
 {
   "personal": {
     "name": "Grover Sean Reyes",
+    "title": "Senior Full-Stack Software Developer and DevOps Engineer",
     "emails": ["sean@yob-yob.com", "mr.seangrover@icloud.com"],
     "primaryEmail": "sean@yob-yob.com",
     "birthday": "January 22, 1999",
+    "address": "Carcar City, Cebu, Philippines, 6019",
     "portfolioUrl": "https://yob-yob.com",
     "githubUrl": "https://github.com/yob-yob",
+    "linkedinUrl": "https://ph.linkedin.com/in/groverseanreyes",
     "linkedinVanity": "groverseanreyes"
   },
   "about": {
@@ -420,7 +423,7 @@
   },
   "meta": {
     "lastUpdated": "2025",
-    "copyright": "© 2024 Grover Sean Reyes. All rights reserved.",
+    "copyright": "Grover Sean Reyes. All rights reserved.",
     "version": "2.0.0"
   }
 }

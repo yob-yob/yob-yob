@@ -2,11 +2,14 @@ import portfolioData from './portfolio.json';
 
 export interface Personal {
 	name: string;
+	title: string;
 	emails: string[];
 	primaryEmail: string;
 	birthday: string;
+	address: string;
 	portfolioUrl: string;
 	githubUrl: string;
+	linkedinUrl: string;
 	linkedinVanity: string;
 }
 
