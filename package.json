@@ -8,7 +8,8 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "generate:github-stats": "tsx scripts/generate-github-stats.ts"
   },
   "author": "Grover Sean Reyes",
   "license": "MIT",
@@ -17,9 +18,12 @@
     "@sveltejs/kit": "^2.21.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tailwindcss/vite": "^4.1.17",
+    "@types/d3-scale": "^4.0.9",
+    "layerchart": "^2.0.0-next.48",
     "svelte": "^5.33.0",
     "svelte-check": "^4.2.1",
     "tailwindcss": "^4.1.17",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   },
