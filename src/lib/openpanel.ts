@@ -7,16 +7,25 @@ export function initOpenPanel() {
 	if (!browser || op) return;
 
 	const clientId = import.meta.env.PUBLIC_OPENPANEL_CLIENT_ID;
-	if (!clientId) return;
+	if (!clientId) {
+		if (dev) console.warn('[OpenPanel] Not initialized — PUBLIC_OPENPANEL_CLIENT_ID is missing');
+		return;
+	}
+
+	const apiUrl = import.meta.env.PUBLIC_OPENPANEL_API_URL;
 
 	op = new OpenPanel({
-		apiUrl: import.meta.env.PUBLIC_OPENPANEL_API_URL,
+		apiUrl,
 		clientId,
 		trackScreenViews: true,
 		trackOutgoingLinks: true,
 		trackAttributes: true,
 		debug: dev
 	});
+
+	if (dev) {
+		console.log('[OpenPanel] Ready — events will be sent to', apiUrl ?? 'default API');
+	}
 }
 
 export function getOpenPanel() {
@@ -24,6 +33,7 @@ export function getOpenPanel() {
 }
 
 export function trackEvent(name: string, properties?: Record<string, string>) {
+	if (dev) console.log('[OpenPanel] Event:', name, properties ?? {});
 	op?.track(name, properties);
 }
 
