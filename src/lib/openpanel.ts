@@ -1,22 +1,23 @@
 import { OpenPanel } from '@openpanel/web';
 import { browser, dev } from '$app/environment';
+import {
+	PUBLIC_OPENPANEL_API_URL,
+	PUBLIC_OPENPANEL_CLIENT_ID
+} from '$env/static/public';
 
 let op: OpenPanel | undefined;
 
 export function initOpenPanel() {
 	if (!browser || op) return;
 
-	const clientId = import.meta.env.PUBLIC_OPENPANEL_CLIENT_ID;
-	if (!clientId) {
+	if (!PUBLIC_OPENPANEL_CLIENT_ID) {
 		if (dev) console.warn('[OpenPanel] Not initialized — PUBLIC_OPENPANEL_CLIENT_ID is missing');
 		return;
 	}
 
-	const apiUrl = import.meta.env.PUBLIC_OPENPANEL_API_URL;
-
 	op = new OpenPanel({
-		apiUrl,
-		clientId,
+		apiUrl: PUBLIC_OPENPANEL_API_URL,
+		clientId: PUBLIC_OPENPANEL_CLIENT_ID,
 		trackScreenViews: true,
 		trackOutgoingLinks: true,
 		trackAttributes: true,
@@ -24,7 +25,7 @@ export function initOpenPanel() {
 	});
 
 	if (dev) {
-		console.log('[OpenPanel] Ready — events will be sent to', apiUrl ?? 'default API');
+		console.log('[OpenPanel] Ready — events will be sent to', PUBLIC_OPENPANEL_API_URL || 'default API');
 	}
 }
 

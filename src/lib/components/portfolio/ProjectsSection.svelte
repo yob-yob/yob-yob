@@ -2,11 +2,8 @@
 	import { onMount } from 'svelte';
 	import { Clock, Trophy } from 'lucide-svelte';
 	import { portfolio } from '$lib/data/portfolio';
-	import {
-		fetchProjectBranchUpdate,
-		formatProjectLastUpdated,
-		type ProjectBranchUpdate
-	} from '$lib/data/github-branch';
+	import { formatProjectLastUpdated, type ProjectBranchUpdate } from '$lib/data/github-branch';
+	import { fetchGitHubStats } from '$lib/data/github-stats';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';
@@ -15,14 +12,12 @@
 	let projectUpdates = $state<Record<string, ProjectBranchUpdate>>({});
 
 	onMount(async () => {
-		const results = await Promise.all(
-			portfolio.projects.map(async (project) => {
-				const update = await fetchProjectBranchUpdate(project);
-				return update ? ([project.id, update] as const) : null;
-			})
-		);
-
-		projectUpdates = Object.fromEntries(results.filter((entry) => entry !== null));
+		try {
+			const stats = await fetchGitHubStats();
+			projectUpdates = stats.projectBranchUpdates;
+		} catch {
+			projectUpdates = {};
+		}
 	});
 </script>
 

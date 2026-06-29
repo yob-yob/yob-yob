@@ -1,13 +1,17 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import portfolioData from '../src/lib/data/portfolio.json' with { type: 'json' };
+import { resolveGithubRepo } from '../src/lib/data/github-repo.js';
 import type { GitHubStats } from '../src/lib/types/github-stats.js';
+import type { Project } from '../src/lib/data/portfolio.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, '../static/data/github-stats.json');
 
 const USERNAME = process.env.GITHUB_USERNAME ?? 'yob-yob';
 const TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_BRANCH = 'main';
 
 interface GraphQLResponse<T> {
 	data?: T;
@@ -369,6 +373,51 @@ async function fetchOpenSourceContributions(username: string) {
 		.slice(0, MAX_PULL_REQUESTS);
 }
 
+interface GitHubBranchResponse {
+	name: string;
+	commit: {
+		commit: {
+			committer: {
+				date: string;
+			};
+		};
+	};
+}
+
+async function fetchProjectBranchUpdates(
+	projects: Project[]
+): Promise<GitHubStats['projectBranchUpdates']> {
+	const updates: GitHubStats['projectBranchUpdates'] = {};
+
+	await Promise.all(
+		projects.map(async (project) => {
+			const githubRepo = resolveGithubRepo(project);
+			if (!githubRepo) return;
+
+			const response = await fetch(
+				`https://api.github.com/repos/${githubRepo}/branches/${GITHUB_BRANCH}`,
+				{
+					headers: {
+						Accept: 'application/vnd.github+json',
+						Authorization: `Bearer ${TOKEN}`
+					}
+				}
+			);
+
+			if (!response.ok) return;
+
+			const branch = (await response.json()) as GitHubBranchResponse;
+			const lastUpdatedAt = branch.commit?.commit?.committer?.date;
+
+			if (!lastUpdatedAt) return;
+
+			updates[project.id] = { lastUpdatedAt, branch: branch.name };
+		})
+	);
+
+	return updates;
+}
+
 async function main() {
 	console.log(`Generating GitHub stats for ${USERNAME}...`);
 
@@ -376,6 +425,7 @@ async function main() {
 	const languagesByRepo = await fetchLanguagesByRepo(USERNAME);
 	const statsByYear = await fetchStatsByYear(USERNAME, profile.contributionYears);
 	const openSourceContributions = await fetchOpenSourceContributions(USERNAME);
+	const projectBranchUpdates = await fetchProjectBranchUpdates(portfolioData.projects);
 
 	const stats: GitHubStats = {
 		generatedAt: new Date().toISOString(),
@@ -383,7 +433,8 @@ async function main() {
 		profile,
 		languagesByRepo,
 		statsByYear,
-		openSourceContributions
+		openSourceContributions,
+		projectBranchUpdates
 	};
 
 	await mkdir(dirname(OUTPUT_PATH), { recursive: true });

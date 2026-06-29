@@ -21,4 +21,5 @@ export interface GitHubStats {
 		repoUrl: string;
 		createdAt: string;
 	}[];
+	projectBranchUpdates: Record<string, { lastUpdatedAt: string; branch: string }>;
 }
