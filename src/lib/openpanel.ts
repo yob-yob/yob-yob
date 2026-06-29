@@ -26,3 +26,23 @@ export function getOpenPanel() {
 export function trackEvent(name: string, properties?: Record<string, string>) {
 	op?.track(name, properties);
 }
+
+export function trackInternalLinkClick(properties: {
+	href: string;
+	label: string;
+	section: string;
+}) {
+	trackEvent('link_clicked', {
+		link_type: 'internal',
+		href: properties.href,
+		label: properties.label,
+		section: properties.section
+	});
+}
+
+export function trackSectionNavClick(sectionId: string, sectionLabel: string) {
+	trackEvent('section_nav_clicked', {
+		section_id: sectionId,
+		section_label: sectionLabel
+	});
+}

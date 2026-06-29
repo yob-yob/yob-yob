@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { FileText } from 'lucide-svelte';
 	import { portfolio } from '$lib/data/portfolio';
+	import { trackInternalLinkClick } from '$lib/openpanel';
 	import profilePhoto from '$lib/assets/profile.jpg';
 	import PhilippinesFlagIcon from '$lib/components/icons/PhilippinesFlagIcon.svelte';
 	import GitHubIcon from '$lib/components/links/icons/GitHubIcon.svelte';
@@ -25,6 +26,8 @@
 			<a
 				href="/resume"
 				class="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 transition-colors"
+				onclick={() =>
+					trackInternalLinkClick({ href: '/resume', label: 'Resume', section: 'header' })}
 			>
 				<FileText class="size-4" />
 				Resume
