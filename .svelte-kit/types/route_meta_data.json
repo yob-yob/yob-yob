@@ -1,0 +1,16 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/designs/canva": [
+		"src/routes/+layout.ts"
+	],
+	"/exercise": [
+		"src/routes/+layout.ts"
+	],
+	"/resume": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	]
+}
