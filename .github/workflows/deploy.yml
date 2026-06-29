@@ -32,7 +32,7 @@ jobs:
           PUBLIC_OPENPANEL_CLIENT_ID: ${{ vars.PUBLIC_OPENPANEL_CLIENT_ID }}
           PUBLIC_OPENPANEL_API_URL: ${{ vars.PUBLIC_OPENPANEL_API_URL }}
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: build
 

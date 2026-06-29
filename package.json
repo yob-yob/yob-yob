@@ -6,7 +6,7 @@
   "description": "Grover Sean Reyes - personal portfolio and resume",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "svelte-kit sync && vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "generate:github-stats": "bun scripts/generate-github-stats.ts"
