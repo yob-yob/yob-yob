@@ -28,6 +28,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "@openpanel/web": "^1.4.1",
     "bits-ui": "^1.4.8",
     "clsx": "^2.1.1",
     "lucide-svelte": "^0.511.0",

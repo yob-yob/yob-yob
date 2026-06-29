@@ -1,9 +1,15 @@
 <script lang="ts">
 	import '../app.css';
+	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { portfolio } from '$lib/data/portfolio';
+	import { initOpenPanel } from '$lib/openpanel';
 
 	let { children } = $props();
+
+	onMount(() => {
+		initOpenPanel();
+	});
 
 	const isResume = $derived(page.url.pathname.startsWith('/resume'));
 	const currentYear = new Date().getFullYear();
