@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { getResumeView } from '$lib/data/resume';
-	import { trackInternalLinkClick } from '$lib/openpanel';
 	import profilePhoto from '$lib/assets/profile.jpg';
 
 	const resume = getResumeView();
@@ -26,12 +25,6 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-blue-600 hover:text-blue-800 underline"
-				onclick={() =>
-					trackInternalLinkClick({
-						href: resume.personal.portfolioUrl,
-						label: 'Portfolio',
-						section: 'resume'
-					})}
 			>
 				🌐 Portfolio: yob-yob.com
 			</a>

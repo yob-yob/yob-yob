@@ -1,16 +1,12 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { portfolioSections } from '$lib/data/portfolio-sections';
-	import { trackSectionNavClick } from '$lib/openpanel';
 
 	const SCROLL_OFFSET = 120;
 
 	let activeId = $state(portfolioSections[0].id);
 
 	function scrollToSection(id: string) {
-		const section = portfolioSections.find((s) => s.id === id);
-		if (section) trackSectionNavClick(section.id, section.label);
-
 		document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	}
 

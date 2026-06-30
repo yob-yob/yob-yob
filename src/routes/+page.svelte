@@ -13,7 +13,6 @@
 	import GithubCards from '$lib/components/shared/GithubCards.svelte';
 	import ParticlesBackground from '$lib/components/shared/ParticlesBackground.svelte';
 	import PortfolioSideNav from '$lib/components/portfolio/PortfolioSideNav.svelte';
-	import PortfolioSectionTracker from '$lib/components/portfolio/PortfolioSectionTracker.svelte';
 	import profilePhoto from '$lib/assets/profile.jpg';
 </script>
 
@@ -28,7 +27,6 @@
 <ParticlesBackground />
 
 <PortfolioSideNav />
-<PortfolioSectionTracker />
 
 <div class="relative container mx-auto px-4 py-8 max-w-4xl z-10">
 	<HeaderSection />
