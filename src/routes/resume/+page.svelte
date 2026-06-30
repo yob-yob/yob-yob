@@ -1,8 +1,14 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import posthog from 'posthog-js';
 	import { getResumeView } from '$lib/data/resume';
 	import profilePhoto from '$lib/assets/profile.jpg';
 
 	const resume = getResumeView();
+
+	onMount(() => {
+		posthog.capture('resume_viewed');
+	});
 </script>
 
 <header class="flex items-start gap-4 mb-4 pb-3 border-b-2 border-sky-500">
@@ -14,7 +20,7 @@
 	<div class="flex-1">
 		<h1 class="text-2xl font-bold mb-1">{resume.personal.name.toUpperCase()}</h1>
 		<div class="text-xs text-slate-700 mb-1">
-			{#each resume.personal.emails as email, i}
+			{#each resume.personal.emails as email, i (email)}
 				{#if i > 0}<span class="mx-2">|</span>{/if}
 				<span>📧 {email}</span>
 			{/each}
@@ -25,6 +31,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-blue-600 hover:text-blue-800 underline"
+				onclick={() => posthog.capture('resume_portfolio_link_clicked', { url: resume.personal.portfolioUrl })}
 			>
 				🌐 Portfolio: yob-yob.com
 			</a>
@@ -34,6 +41,7 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-blue-600 hover:text-blue-800 underline"
+				onclick={() => posthog.capture('resume_github_link_clicked', { url: resume.personal.githubUrl })}
 			>
 				🐙 GitHub: github.com/yob-yob
 			</a>

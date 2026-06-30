@@ -1,6 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { onMount } from 'svelte';
+	import posthog from 'posthog-js';
 	import NotFound from '$lib/components/shared/NotFound.svelte';
+
+	onMount(() => {
+		posthog.capture('page_not_found', { status: page.status, path: page.url.pathname });
+	});
 </script>
 
 <svelte:head>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { portfolioSections } from '$lib/data/portfolio-sections';
+	import posthog from 'posthog-js';
 
 	const SCROLL_OFFSET = 120;
 
@@ -44,7 +45,10 @@
 			<li>
 				<button
 					type="button"
-					onclick={() => scrollToSection(section.id)}
+					onclick={() => {
+						scrollToSection(section.id);
+						posthog.capture('section_nav_clicked', { section_id: section.id, section_label: section.label });
+					}}
 					class="group relative flex w-full items-center gap-2 rounded-md py-1.5 pl-3 pr-2 text-left text-xs transition-colors {activeId ===
 					section.id
 						? 'text-sky-400'

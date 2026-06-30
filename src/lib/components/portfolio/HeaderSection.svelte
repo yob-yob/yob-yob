@@ -5,6 +5,7 @@
 	import PhilippinesFlagIcon from '$lib/components/icons/PhilippinesFlagIcon.svelte';
 	import GitHubIcon from '$lib/components/links/icons/GitHubIcon.svelte';
 	import LinkedInIcon from '$lib/components/links/icons/LinkedInIcon.svelte';
+	import posthog from 'posthog-js';
 </script>
 
 <header class="text-center mb-12">
@@ -25,6 +26,7 @@
 			<a
 				href="/resume"
 				class="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 transition-colors"
+				onclick={() => posthog.capture('resume_link_clicked')}
 			>
 				<FileText class="size-4" />
 				Resume
@@ -35,6 +37,7 @@
 				rel="noopener noreferrer"
 				class="text-slate-400 hover:text-white transition-colors"
 				aria-label="GitHub profile"
+				onclick={() => posthog.capture('header_github_clicked', { url: portfolio.personal.githubUrl })}
 			>
 				<GitHubIcon class="size-5" />
 			</a>
@@ -44,6 +47,7 @@
 				rel="noopener noreferrer"
 				class="text-slate-400 hover:text-[#0a66c2] transition-colors"
 				aria-label="LinkedIn profile"
+				onclick={() => posthog.capture('header_linkedin_clicked', { url: portfolio.personal.linkedinUrl })}
 			>
 				<LinkedInIcon class="size-5" />
 			</a>

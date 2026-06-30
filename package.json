@@ -32,6 +32,7 @@
     "clsx": "^2.1.1",
     "lucide-svelte": "^0.511.0",
     "particles.js": "^2.0.0",
+    "posthog-js": "^1.396.2",
     "tailwind-merge": "^3.3.0",
     "tailwind-variants": "^1.0.0"
   }

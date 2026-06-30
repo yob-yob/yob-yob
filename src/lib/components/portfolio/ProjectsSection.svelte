@@ -8,6 +8,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';
 	import SectionHeading from './SectionHeading.svelte';
+	import posthog from 'posthog-js';
 
 	let projectUpdates = $state<Record<string, ProjectBranchUpdate>>({});
 
@@ -38,7 +39,13 @@
 						</p>
 					{/if}
 				</div>
-				<Button variant="pill" href={project.url} target="_blank" rel="noopener noreferrer">
+				<Button
+					variant="pill"
+					href={project.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					onclick={() => posthog.capture('project_link_clicked', { project_name: project.name, project_url: project.url })}
+				>
 					{project.linkText}
 				</Button>
 			</CardHeader>
