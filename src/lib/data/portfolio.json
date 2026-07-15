@@ -136,6 +136,16 @@
       "url": "https://github.com/yob-yob/Laravel-CI",
       "linkText": "GitHub",
       "tags": ["Docker", "CI/CD", "Laravel", "Open Source"]
+    },
+    {
+      "id": "signalscout",
+      "name": "SignalScout",
+      "description": "Cell tower line-of-sight and terrain analyzer — a single-page web app that helps you figure out which nearby cell tower to aim a directional antenna at, and how high to mount it. Computes terrain profiles, Fresnel zones, and path loss using Open-Meteo elevation data.",
+      "resumeDescription": "Cell tower line-of-sight and terrain analyzer SPA — computes terrain profiles, Fresnel zones, and RF path loss to optimize directional antenna placement.",
+      "url": "http://signalscout.yob-yob.com",
+      "linkText": "Visit Site",
+      "githubRepo": "yob-yob/signalscout",
+      "tags": ["SvelteKit", "Bun", "Tailwind CSS", "Leaflet", "TypeScript", "RF Engineering"]
     }
   ],
   "hobbies": {
