@@ -10,6 +10,7 @@
 	import EducationSection from '$lib/components/portfolio/EducationSection.svelte';
 	import InvestmentsSection from '$lib/components/portfolio/InvestmentsSection.svelte';
 	import LinksSection from '$lib/components/portfolio/LinksSection.svelte';
+	import BlogSection from '$lib/components/portfolio/BlogSection.svelte';
 	import GithubCards from '$lib/components/shared/GithubCards.svelte';
 	import ParticlesBackground from '$lib/components/shared/ParticlesBackground.svelte';
 	import PortfolioSideNav from '$lib/components/portfolio/PortfolioSideNav.svelte';
@@ -39,5 +40,6 @@
 	<EducationSection />
 	<InvestmentsSection />
 	<LinksSection />
+	<BlogSection />
 	<GithubCards />
 </div>
