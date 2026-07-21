@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "title": "I Got Locked Out of My Self-Hosted Termix Instance.",
+        "subtitle": "Here's How I Got Back In.",
+        "file": "termix.md",
+        "tags": ["self-hosted", "termix", "sqlite", "encryption", "data-recovery"],
+        "image": "/blog/assets/termix-logo.svg"
+    }
+]
