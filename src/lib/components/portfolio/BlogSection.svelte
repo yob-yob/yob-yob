@@ -16,7 +16,7 @@
 	}));
 </script>
 
-<SectionHeading id="blog" title="Blog" icon={Newspaper} class="mb-12">
+<SectionHeading id="blogs" title="Blogs" icon={Newspaper} class="mb-12">
 	<div class="space-y-4">
 		{#each latestPosts as post}
 			<a
