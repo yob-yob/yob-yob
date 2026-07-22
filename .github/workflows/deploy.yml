@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PUBLIC_POSTHOG_PROJECT_TOKEN: ${{ vars.PUBLIC_POSTHOG_PROJECT_TOKEN }}
-      PUBLIC_POSTHOG_HOST: ${{ vars.PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com' }}
+      PUBLIC_POSTHOG_HOST: ${{ vars.PUBLIC_POSTHOG_HOST || 'https://s.yob-yob.com' }}
     steps:
       - uses: actions/checkout@v7
 

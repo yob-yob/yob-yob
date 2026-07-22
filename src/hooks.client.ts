@@ -6,7 +6,7 @@ export async function init() {
 	posthog.init(PUBLIC_POSTHOG_PROJECT_TOKEN, {
 		api_host: PUBLIC_POSTHOG_HOST,
 		ui_host: 'https://eu.posthog.com',
-		defaults: '2026-01-30',
+		defaults: '2026-05-30',
 		capture_exceptions: true
 	});
 }
