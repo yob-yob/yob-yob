@@ -13,5 +13,6 @@ export const portfolioSections: PortfolioSection[] = [
 	{ id: 'education', label: 'Education' },
 	{ id: 'investments', label: 'Investment in Myself' },
 	{ id: 'links', label: 'Links' },
+	{ id: 'blog', label: 'Blog' },
 	{ id: 'github-cards', label: 'Github Cards' }
 ];
