@@ -1,5 +1,12 @@
 [
     {
+        "id": 2,
+        "title": "BIR Form 1701Q — A Freelancer's Guide",
+        "subtitle": "Quarterly income tax for Philippine freelancers on the 8% option, walked through Q1 to Q3 with real numbers.",
+        "file": "BIR-FORM-1701Q-Ultimate-Guide.html",
+        "tags": ["philippines", "bir", "freelancing", "taxes", "1701q"]
+    },
+    {
         "id": 1,
         "title": "I Got Locked Out of My Self-Hosted Termix Instance.",
         "subtitle": "Here's How I Got Back In.",
