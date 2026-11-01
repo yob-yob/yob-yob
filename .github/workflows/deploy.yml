@@ -1,4 +1,15 @@
-name: Deploy to GitHub Pages
+name: Deploy
+
+# On a push to main (or by hand from the Actions tab): build here, then upload the static
+# build to the portfolio LXC on homelab01, jumping through vps03 (the LXC has no public
+# address). Set up by the infrastructure repo, playbooks/homelab-apps.yml; the one key can
+# only open a tunnel to the LXC on vps03, and only run `deploy-static portfolio` on the LXC,
+# which unpacks the upload and switches the site to it:
+#   secret   DEPLOY_SSH_KEY      private key
+#   variable DEPLOY_HOST         the LXC's LAN address
+#   variable DEPLOY_JUMP         deploy-jump@vps03.yob-yob.com
+#   variable DEPLOY_KNOWN_HOSTS  host keys of vps03 and the LXC, so both hops are verified
+# Served at https://yob-yob.com by Caddy on vps03 (www redirects to it).
 
 on:
   push:
@@ -9,16 +20,15 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       PUBLIC_POSTHOG_PROJECT_TOKEN: ${{ vars.PUBLIC_POSTHOG_PROJECT_TOKEN }}
       PUBLIC_POSTHOG_HOST: ${{ vars.PUBLIC_POSTHOG_HOST }}
@@ -32,16 +42,18 @@ jobs:
       - run: bun install --frozen-lockfile
       - run: bun run build
 
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5
+      - name: Upload the build to the portfolio LXC
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          KNOWN_HOSTS: ${{ vars.DEPLOY_KNOWN_HOSTS }}
+          HOST: ${{ vars.DEPLOY_HOST }}
+          JUMP: ${{ vars.DEPLOY_JUMP }}
+          COMMIT: ${{ github.sha }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          tar -czf - -C build . | ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
+            -o ProxyCommand="ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -W %h:%p $JUMP" \
+            "root@$HOST" "deploy $COMMIT"
